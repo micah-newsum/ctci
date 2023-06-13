@@ -6,7 +6,8 @@ public class StackSpace {
     }
 
     /**
-    * Each call adds a level to the stack.
+    * This algorithm taks O(n) time and space because every value from incurs a function
+    * call and each call adds a level to the stack.
     * 
     * sum(4) returns 10 to caller
     *  -> sum(3) returns 6 to caller
@@ -20,4 +21,6 @@ public class StackSpace {
         }
         return n + sum(n-1);
     }
+
+
 }
