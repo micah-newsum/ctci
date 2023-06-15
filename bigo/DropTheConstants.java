@@ -1,5 +1,4 @@
 package bigo;
-
 public class DropTheConstants {
    public static void main(String[] args) {
     int[] array = {1, 2, 10, 4, -5};
