@@ -2,7 +2,7 @@ package bigo;
 
 import java.util.Arrays;
 
-public class Example7 {
+public class Example8 {
     /**
      * O(N*s*log(s)) + O(s*N*log(N)) => O(Ns(log(s) + log(N)))
      * @param args
