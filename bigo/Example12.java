@@ -14,17 +14,33 @@ public class Example12 {
      * Pseudo code:
      * permutation("car", "")
      *      for i to "car".length:
+     *          i = 0
      *          permutation("ar", "c")
      *              for i to "ar".length:
+     *                  i = 0
      *                  permutation("r", "ca")
      *                      for i to "r".length:
+     *                          i = 0
      *                          permutation("", "car")
-     *                              print "car"
+     *                              print "car" <----
      *                  i = 1
      *                  permutation("a", "cr")
      *                      for i to "a".length:
-     *                          ...
-     *          
+     *                          i = 0
+     *                          permutation("", "cra")
+     *                              print "cra" <----
+     *          i = 1
+     *          permutation("cr", "a")
+     *              for i; i < "cr".length:
+     *                  i = 0
+     *                  permutation("r", "ac")
+     *                      for i; i < "r".length:
+     *                          i = 0
+     *                          permutation("", "acr")
+     *                              print "acr" <----
+     *          i = 2
+     *                          
+     *                                         
      * 
      * 
      *      
