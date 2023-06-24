@@ -9,8 +9,41 @@ public class Example12 {
         permutation(str, "");
     }
 
-    /**         
+    /** 
+     * How many times does permutation get called in its base case?
+     *      If we were to generate a permutation, then we would need to pick characters for each "slot." For example,
+     * suppose we have the string "car". In the first slot, we have 3 choices 'c', 'a', or 'r'. Once we pick the letter
+     * there, we have 2 choices for the next slot. (Note that this is 2 choices FOR EACH of the 3 earlier choices.) Then,
+     * one choice for the last slot.
      * 
+     * Therefore, the total number of options is 3 * 2 * 1, which is also expressed as 3! (3 factorial).
+     * 
+     * This tells us that there are n! permutations. Therefore, permutation is called n! times in its base case (when the prefix parameter
+     * is the full permutation)
+     * 
+     * How many times does permutation get called before its base case?
+     *      What about the permutation calls in the for loop? Picture a large call tree representing all the calls. There are 
+     * n! leaves, with each leaf attached to a path of length n. Therefore, we know there will be no more than n * n! nodes (function 
+     * calls) in this tree.
+     *                                          permutation("car", "")
+     *                                          /
+     *                              permutation("ar", "c")          ...
+     *                              /
+     *              permutation("r", "ca")       permutation("a", "cr")
+     *              /
+     * permutation("", "car")               permutation("", "cra")
+     *          ^                                      ^
+     *         leaf                                   leaf
+     * 
+     * How long will each function call take?
+     *      Executing "System.out.println(prefix)" takes O(n) time since each character needs to be printed.
+     * "String rem = str.substring(0, i) + str.substring(i + 1);" takes O(n) time due to string concatenation.
+     * "prefix + str.charAt(i)" takes O(n) time due to sring concatenation.
+     * 
+     * What is the total runtime?
+     *      Since we are calling permutation O(n * n!) times (as an upper bound), and each one takes O(n) time, the 
+     * total runtime will not exceed O(n^2 * n!).
+     *         
      * Pseudo code:
      * permutation("car", "")
      *      for i to i < "car".length:
@@ -59,6 +92,8 @@ public class Example12 {
      *                          i = 0
      *                          permutation("", "rac")
      *                              print "rac"
+     * 
+     * 
      * @param str
      * @param prefix
      */
