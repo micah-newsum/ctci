@@ -1,0 +1,18 @@
+Why is the runtime O(2^N)?
+
+We can use the earlier pattern established for recursive calls: O(branches^depth). There are 2 branches
+per call and we go as deep as N. Therefore, the runtime is O(2^N).
+
+Example: fib(5)
+                                                fib(5)
+                                /                                     \
+                              fib(4)              +                  fib(3)
+                        /             \                          /           \
+                    fib(3)      +        fib(2)             fib(2)    +    fib(1)
+                    /    \              /      \            /      \
+                fib(2) + fib(1)     fib(1)  + fib(0)      fib(1) + fib(0)
+                /     \
+            fib(1)  + fib(0)
+
+Depth = 4
+Total calls = 15 = 2^N - 1
