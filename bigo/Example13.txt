@@ -15,4 +15,5 @@ Example: fib(5)
             fib(1)  + fib(0)
 
 Depth = 4
+2^4 = 16
 Total calls = 15 = 2^N - 1
