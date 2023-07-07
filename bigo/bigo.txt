@@ -2,9 +2,6 @@ What is Big O time?
     - The language and metric used to describe the efficiency of algorithms. Big O allows us to express
     how the time/space scales relative to input size.
 
-What is Time Complexity?
-    - The amount of time taken by an algorithm to run, as a function of the length of the input.
-
 What is Big-Oh notation?
     - It describes an upper bound. More specifically, it's a way of expressing the greatest amount of resource 
     (usually time) that is required by an algorithm for some class of inputs of size N (typically the worst such input).
@@ -18,6 +15,9 @@ How is Big O similar to a less-than-or-equal-to relationship?
     runtime bigger than O(N).
     - Within the industry, you should always try to offer the tightest description of the runtime. It would be incorrect
     to describe the afforementioned algorithm as O(N^2); it would just be O(N).
+
+What is Time Complexity?
+    - The amount of time taken by an algorithm to run, as a function of the length of the input.
 
 What are the 3 different ways the runtime of an algorithm can be described?
     - Best Case, Worst Case, and Expected Case.
