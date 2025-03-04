@@ -6,6 +6,7 @@ public class SquareRoot {
     }
 
     public static int sqrt(int n) {
+        System.out.printf("sqrt_helper(%d, %d, %d)\n", n, 1, n);
         return sqrt_helper(n, 1, n);
     }
 
