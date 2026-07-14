@@ -1,6 +1,6 @@
 public class Example12 {
     public static void main(String[] args) {
-        permutation("car");
+        permutation("abc");
     }
 
     static void permutation(String str) {
