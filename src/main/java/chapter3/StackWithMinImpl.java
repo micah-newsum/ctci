@@ -1,12 +1,12 @@
 package chapter3;
 
-public class StackWithMin<T extends Comparable<T>> {
+public class StackWithMinImpl<T extends Comparable<T>> {
     private final T[] stack;
     private final T[] minimums;
     private T currentMin;
     private int size;
 
-    public StackWithMin(int capacity) {
+    public StackWithMinImpl(int capacity) {
         stack = (T[]) new Comparable[capacity];
         minimums = (T[]) new Comparable[capacity];
     }
@@ -34,7 +34,7 @@ public class StackWithMin<T extends Comparable<T>> {
     }
 
     public static void main(String[] args) {
-        StackWithMin<String> stack = new StackWithMin<>(3);
+        StackWithMinImpl<String> stack = new StackWithMinImpl<>(3);
         stack.push("c");
         stack.push("b");
         stack.push("a");
@@ -44,7 +44,7 @@ public class StackWithMin<T extends Comparable<T>> {
         stack.pop();
         System.out.println(stack.min());
 
-        StackWithMin<Integer> stackOfNums = new StackWithMin<>(3);
+        StackWithMinImpl<Integer> stackOfNums = new StackWithMinImpl<>(3);
         stackOfNums.push(3);
         stackOfNums.push(2);
         stackOfNums.push(1);
