@@ -48,27 +48,11 @@ public class ArrayStack<T> implements Stack<T> {
         return size;
     }
 
-    public static void main(String[] args) {
-        // Stack of Strings
-        Stack<String> stackOfStrings = new ArrayStack<>();
-        stackOfStrings.push("a");
-        stackOfStrings.push("b");
-        stackOfStrings.push("c");
-        stackOfStrings.push("d");
-        System.out.println(stackOfStrings.pop());
-        System.out.println(stackOfStrings.pop());
-        System.out.println(stackOfStrings.pop());
-        System.out.println(stackOfStrings.pop());
-
-        // Stack of ints
-        Stack<Integer> stackOfIntegers = new ArrayStack<>();
-        stackOfIntegers.push(1);
-        stackOfIntegers.push(2);
-        stackOfIntegers.push(3);
-        stackOfIntegers.push(4);
-        System.out.println(stackOfIntegers.pop());
-        System.out.println(stackOfIntegers.pop());
-        System.out.println(stackOfIntegers.pop());
-        System.out.println(stackOfIntegers.pop());
+   @Override
+    public T peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack[size - 1];
     }
 }
