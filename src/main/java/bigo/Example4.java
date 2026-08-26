@@ -1,3 +1,5 @@
+package bigo;
+
 public class Example4 {
     public static void main(String[] args) {
         int[] arrayA = { 12, 3, 9 };

@@ -1,3 +1,5 @@
+package bigo;
+
 import java.util.Arrays;
 
 public class Example8 {

@@ -1,4 +1,5 @@
 package chapter3;
 
-public interface Minable {
+public interface Minable<T> {
+    T min();
 }

@@ -1,4 +1,4 @@
-package additionalproblems;
+package bigo.additionalproblems;
 
 public class VI_10 {
     public static void main(String[] args) {

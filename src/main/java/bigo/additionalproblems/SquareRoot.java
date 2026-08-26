@@ -1,4 +1,4 @@
-package additionalproblems;
+package bigo.additionalproblems;
 
 public class SquareRoot {
     public static void main(String[] args) {

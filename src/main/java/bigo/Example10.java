@@ -1,3 +1,5 @@
+package bigo;
+
 public class Example10 {
     public static void main(String[] args) {
         System.out.println(isPrime(33));

@@ -1,4 +1,4 @@
-package additionalproblems;
+package bigo.additionalproblems;
 
 public class V1_11 {
     static int numChars = 26;

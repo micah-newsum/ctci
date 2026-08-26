@@ -1,4 +1,4 @@
-package arrays_and_strings;
+package bigo.arrays_and_strings;
 
 import java.util.HashSet;
 
