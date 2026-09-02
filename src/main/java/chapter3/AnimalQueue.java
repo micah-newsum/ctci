@@ -30,9 +30,9 @@ public class AnimalQueue {
         }
 
         if (oldestDog.get().isOlderThan(oldestCat.get())) {
-            return dequeueCat();
-        } else {
             return dequeueDog();
+        } else {
+            return dequeueCat();
         }
     }
 
@@ -51,7 +51,7 @@ public class AnimalQueue {
         queue.enqueue(new Cat("Fluffy"));
         queue.enqueue(new Dog("Spot"));
         System.out.println(queue.dequeueAny());
-        System.out.println(queue.dequeueCat());
+        System.out.println(queue.dequeueAny());
         System.out.println(queue.dequeueAny());
         System.out.println(queue.dequeueAny());
     }

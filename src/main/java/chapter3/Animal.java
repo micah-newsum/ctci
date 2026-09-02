@@ -21,7 +21,7 @@ public abstract class Animal {
     }
 
     public boolean isOlderThan(Animal animal) {
-       return this.order > animal.order;
+       return this.order < animal.order;
     }
 
     public String toString() {
