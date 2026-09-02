@@ -55,4 +55,13 @@ public class ArrayStack<T> implements Stack<T> {
         }
         return stack[size - 1];
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            sb.append(stack[i]).append(" ");
+        }
+        return sb.toString();
+    }
 }
