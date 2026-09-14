@@ -17,13 +17,17 @@ public class Node<T> {
         n.next = end;
     }
 
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        Node<T> n = this;
-        while (n != null) {
-            sb.append(n.data.toString() + ",");
-            n = n.next;
+    public int size() {
+        int size = 0;
+        Node<T> current = this;
+        while (current != null) {
+            size++;
+            current = current.next;
         }
-        return sb.toString();
+        return size;
+    }
+
+    public String toString() {
+        return this.data.toString();
     }
 }
