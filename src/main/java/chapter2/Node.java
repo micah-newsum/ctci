@@ -30,4 +30,15 @@ public class Node<T> {
     public String toString() {
         return this.data.toString();
     }
+
+    public String printList() {
+        StringBuilder sb = new StringBuilder();
+        Node<T> current = this;
+        while (current != null) {
+            sb.append(current.data.toString());
+            sb.append("->");
+            current = current.next;
+        }
+        return sb.toString();
+    }
 }
