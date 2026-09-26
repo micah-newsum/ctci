@@ -4,19 +4,18 @@ package chapter2;
 public class isPalindrome {
 
     public static boolean isPalindrome(LinkedListNode head) {
-        LinkedListNode reverse = reverseAndClone(head);
-        return isEqual(head, reverse);
+        LinkedListNode reversed = reverseAndClone(head);
+        return isEqual(head, reversed);
     }
 
     private static LinkedListNode reverseAndClone(LinkedListNode node) {
         LinkedListNode head = null;
-        LinkedListNode curr = node;
         LinkedListNode next;
-        while (curr != null) {
-            next = head;
-            head = new LinkedListNode(curr.data);
-            head.next = next;
-            curr = curr.next;
+        while (node != null) {
+            next = new LinkedListNode(node.data);
+            next.next = head;
+            head = next;
+            node = node.next;
         }
         return head;
     }
